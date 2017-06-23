@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="PrimeFaces-5.3" type="jsf-primefaces">
+    <properties version="5.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/SpringLibrary_war_exploded/WEB-INF/lib/primefaces-5.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

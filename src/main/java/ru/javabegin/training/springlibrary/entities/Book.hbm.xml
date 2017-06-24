@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.javabegin.training.springlibrary.entities.Book" table="book" schema="spring-library">
+        <id name="id" column="id"/>
+        <property name="name" column="name"/>
+        <property name="content" column="content"/>
+        <property name="pageCount" column="page_count"/>
+        <property name="isbn" column="isbn"/>
+        <property name="genreId" column="genre_id"/>
+        <property name="authorId" column="author_id"/>
+        <property name="publishYear" column="publish_year"/>
+        <property name="publisherId" column="publisher_id"/>
+        <property name="image" column="image"/>
+        <property name="descr" column="descr"/>
+        <property name="rating" column="rating"/>
+        <property name="voteCount" column="vote_count"/>
+    </class>
+</hibernate-mapping>

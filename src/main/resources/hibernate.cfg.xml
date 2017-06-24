@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/spring-library</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.datasource">jdbc/Library</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <mapping resource="ru/javabegin/training/springlibrary/entities/Author.hbm.xml"/>
+    <mapping resource="ru/javabegin/training/springlibrary/entities/Book.hbm.xml"/>
+    <mapping resource="ru/javabegin/training/springlibrary/entities/Genre.hbm.xml"/>
+    <mapping resource="ru/javabegin/training/springlibrary/entities/Publisher.hbm.xml"/>
+    <mapping resource="ru/javabegin/training/springlibrary/entities/Vote.hbm.xml"/>
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

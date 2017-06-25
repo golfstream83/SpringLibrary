@@ -5,20 +5,14 @@
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="connection.url">jdbc:mysql://localhost:3306/spring-library</property>
-    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.show_sql">true</property>
-    <property name="hibernate.current_session_context_class">thread</property>
-    <property name="hibernate.connection.datasource">jdbc/Library</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">root</property>
-    <mapping resource="ru/javabegin/training/springlibrary/entities/Author.hbm.xml"/>
-    <mapping resource="ru/javabegin/training/springlibrary/entities/Book.hbm.xml"/>
-    <mapping resource="ru/javabegin/training/springlibrary/entities/Genre.hbm.xml"/>
-    <mapping resource="ru/javabegin/training/springlibrary/entities/Publisher.hbm.xml"/>
-    <mapping resource="ru/javabegin/training/springlibrary/entities/Vote.hbm.xml"/>
+    <property name="connection.url">jdbc:mysql://localhost:3306/springlibrary</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 
-    <!-- DB schema will be updated if needed -->
-    <!-- <property name="hbm2ddl.auto">update</property> -->
+    <mapping resource="ru.javabegin.training.springlibrary.entities/Author.hbm.xml"/>
+    <mapping resource="ru.javabegin.training.springlibrary.entities/Genre.hbm.xml"/>
+    <mapping resource="ru.javabegin.training.springlibrary.entities/Book.hbm.xml"/>
+    <mapping resource="ru.javabegin.training.springlibrary.entities/Publisher.hbm.xml"/>
+    <mapping resource="ru.javabegin.training.springlibrary.entities/Vote.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

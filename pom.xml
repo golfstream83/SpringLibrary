@@ -6,12 +6,13 @@
 
     <groupId>ru.javabegin.training.springlibrary</groupId>
     <artifactId>SpringLibrary</artifactId>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <webflow-version>2.4.1.RELEASE</webflow-version>
         <spring-framework-version>4.3.9.RELEASE</spring-framework-version>
-        <springsecurity-version>3.2.5.RELEASE</springsecurity-version>
+        <springsecurity-version>3.2.6.RELEASE</springsecurity-version>
         <slf4j-version>1.6.1</slf4j-version>
         <mojarra-version>2.2.10</mojarra-version>
         <primefaces-version>5.3</primefaces-version>

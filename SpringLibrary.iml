@@ -4,22 +4,32 @@
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="glassfish-web.xml" url="file://$MODULE_DIR$/web/WEB-INF/glassfish-web.xml" />
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+          <deploymentDescriptor name="glassfish-web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/glassfish-web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$MODULE_DIR$/web" relative="/" />
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots />
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/web/WEB-INF/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/dispatcher-servlet.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/config/spring/webflow.xml</file>
+        </fileset>
+      </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" value="a9f3a8dd-43c1-4bbf-a03b-fb4ded7d5ba6" />
+          <unit-entry name="sessionFactory" value="a9f3a8dd-43c1-4bbf-a03b-fb4ded7d5ba6" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
@@ -35,15 +45,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Spring-4.3.9.RELEASE" level="project" />
-    <orderEntry type="library" name="Spring MVC-4.3.9.RELEASE" level="project" />
-    <orderEntry type="library" name="PrimeFaces-5.3" level="project" />
-    <orderEntry type="library" name="PrimeFaces-5.3" level="project" />
-    <orderEntry type="library" name="Mojarra-1.2" level="project" />
-    <orderEntry type="library" name="Spring Security-3.2.5" level="project" />
-    <orderEntry type="library" name="PrimeFaces-5.3" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.2.10" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.2.10" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces:primefaces:5.3" level="project" />
@@ -64,10 +67,10 @@
     <orderEntry type="library" name="Maven: org.springframework.webflow:spring-webflow:2.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.webflow:spring-js:2.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.webflow:spring-js-resources:2.4.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:3.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:3.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:3.2.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:3.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:3.2.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:3.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.6.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:slf4j-log4j12:1.6.1" level="project" />
@@ -85,6 +88,5 @@
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
     <orderEntry type="library" name="Maven: org.jboss:jandex:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.34" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:4.3.8.Final" level="project" />
   </component>
 </module>

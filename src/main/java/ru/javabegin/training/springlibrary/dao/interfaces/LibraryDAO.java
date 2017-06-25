@@ -8,7 +8,7 @@ import ru.javabegin.training.springlibrary.entities.Genre;
 import java.util.List;
 
 
-public interface BookDAO {
+public interface LibraryDAO {
 
     List<Book> getBooks();
     List<Book> getBooks(Author author);

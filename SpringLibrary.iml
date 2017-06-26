@@ -18,11 +18,7 @@
     </facet>
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/web/WEB-INF/applicationContext.xml</file>
-          <file>file://$MODULE_DIR$/web/WEB-INF/dispatcher-servlet.xml</file>
-          <file>file://$MODULE_DIR$/web/WEB-INF/config/spring/webflow.xml</file>
-        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false" />
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Facelet Title</title>
+</h:head>
+<h:body>
+
+    <ui:composition>
+        <div class="search">
+
+
+            <h:form styleClass="search_form" id="search_form">
+
+
+                <input type="submit" class="button-text"></input>
+
+
+                <h:inputText  id="search_string" styleClass="search-text"/>
+
+                <p:commandButton id="btnSearch" value="#{msg.search}" styleClass="button" />
+
+
+                <div class="dropdown">
+                    <h:selectOneMenu id="search_select" />
+                </div>
+
+                <script language="javascript">
+                    document.getElementById("search_form:search_string").setAttribute("placeholder","#{msg.search_book}");
+                </script>
+
+            </h:form>
+
+            <div class="clear"></div>
+
+        </div>
+    </ui:composition>
+
+</h:body>
+</html>
+

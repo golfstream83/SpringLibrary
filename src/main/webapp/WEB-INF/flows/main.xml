@@ -4,9 +4,9 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
 
     <view-state id="main">
-        <on-render>
+        <!--<on-render>
             <evaluate expression="bookDAOImpl.books"/>
-        </on-render>
+        </on-render>-->
     </view-state>
 
 </flow>

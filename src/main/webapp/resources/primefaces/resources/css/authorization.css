@@ -1,0 +1,108 @@
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: baseline;
+}
+a img, :link img, :visited img { border:0 none; }
+table { border-collapse: collapse; border-spacing: 0; }
+ol, ul { list-style-image: none; list-style-position: outside; list-style-type: none; }
+q:before, q:after, blockquote:before, blockquote:after { content:""; }
+
+/* css begin */
+html, body {  }
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #000;
+    background: #f0f0f0;
+    width: 100%;
+    min-width: 950px;
+}
+
+.authorization { width: 480px; height: 400px; background: #fff; border-radius: 5px; margin: 0 auto; margin-top: 176px; box-shadow: 0px 2px 2px #878787; }
+.authorization .lg {float: left; margin-top: 40px; margin-left: 50px;}
+.authorization .lang {float: right; margin-right: 50px; margin-top: 35px; width:35px; height:40px;}
+.authorization .lang img { padding: 10px; }
+.authorization .lang .active {background: #ededed; border-radius: 5px;}
+.authorization form { width: 382px; margin: 0 auto; padding-top: 55px; }
+.authorization .aut-text {width: 364px; padding-left: 15px; background: #f9f9f9; font-size: 16px; color: #797979; border: 1px solid #e2e2e2; border-radius: 5px; padding-top: 15px; padding-bottom: 15px; margin-bottom: 15px;}
+.authorization input:focus {outline: none;}
+.aut-text:focus {border: 1px solid #30b0e2; box-shadow: 0px 0px 5px 0px #abdfed;}
+.save-me { margin-top: 5px; font-size: 16px;  color: #858585; float:right; height: 30px; width: 150px; position: static; text-align: right;}
+.login_button {float: left; cursor: pointer; margin-top: 5px; font-size: 16px; width: 92px; height: 47px; border: 1px solid #aaa; border-radius: 5px; background:url("#{resource['images:button_bg.jpg']}") repeat-x; }
+.login_button:enabled{
+    color: #1C4257;
+    cursor:pointer;
+}
+
+.login_button:disabled{
+    cursor: progress;
+    color: #cccccc;
+}
+
+.login_button .ui-button-text{
+    padding:0;
+    text-align: center;
+}
+
+.remember { float: right; font-size: 16px; color: #0b87c1; margin-top: 55px; }
+.remember:hover {text-decoration: none;}
+
+.clear { clear: both; }
+
+#loading_wrapper{
+    width: 100%;  
+    text-align: center;
+    position: fixed;
+    display: block;
+    z-index: 1000;
+}
+
+#loading_wrapper p{
+    background-color: #fde88e;
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+
+.error{
+    color:#ff0000;
+    font-style: italic;
+    font-size: 14px;
+    margin:10px;
+}
+
+.col{
+    width:33%;
+    vertical-align: middle;
+}
+
+.panel-login tr,.panel-login td{
+   border : 0px;
+}
+
+
+.ui-state-error.aut-text{
+    border: 1px solid #cd0a0a;
+}
+
+
+.div-login-button{
+    width: 100%; 
+    height: 50px; 
+    float:left;
+}
+
+.div-login-button table{
+    height: 50px;
+}

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view>
+        <h:head>
+            <title><ui:insert name="title"/></title>  
+
+        </h:head>
+        <h:body>
+
+
+            <f:facet name="last">
+                <h:outputScript library="js" name="library.js" target="head"/>
+                <h:outputStylesheet library="css" name="main.css" />
+                <h:outputStylesheet library="css" name="dialog.css" />
+            </f:facet>
+
+
+            <div class="header">
+
+                <ui:include src="/WEB-INF/templates/header.xhtml"/>
+            </div>
+
+
+            <div id="wrap">
+
+                <ui:include src="/WEB-INF/templates/logo.xhtml"/>
+                <ui:include src="/WEB-INF/templates/search.xhtml"/>
+                <ui:include src="/WEB-INF/templates/letters.xhtml"/>
+
+
+                <div class="content">
+
+                    <ui:include src="/WEB-INF/templates/genres.xhtml"/>
+
+
+                    <div class="right-content">
+
+                        <div class="clear"></div>
+
+                    </div>
+                </div>
+
+                <div class="footer_blank"></div>
+
+            </div>
+
+            <ui:include src="/WEB-INF/templates/footer.xhtml"/>
+
+
+        </h:body>
+    </f:view>
+</html>
+

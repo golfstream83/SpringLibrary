@@ -11,30 +11,21 @@
     <h:body>
         <ui:composition>
 
-
             <div class="lang">
-
 
                 <h:form style="display: inline;">
 
-                    <h:commandLink>
+                    <h:outputLink value="?lang=ru">
                         <h:graphicImage library="images" name="rus.png" title="#{msg.russian}" width="16" height="13"/>
-                    </h:commandLink>
+                    </h:outputLink>
 
-
-                    <h:commandLink>
+                    <h:outputLink value="?lang=en">
                         <h:graphicImage library="images" name="usa.png" title="#{msg.english}" width="16" height="13"/>
-                    </h:commandLink>
-                    
-                    
+                    </h:outputLink>
 
                 </h:form>
 
-
             </div>
-
-
-
 
         </ui:composition>
     </h:body>

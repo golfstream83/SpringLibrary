@@ -70,9 +70,9 @@ body {
     width:180px;
 }
 
-.search .dropdown select{
+.search .select_search{
 
-    /*background: url("#{resource['images:select-button.png']}") no-repeat right #ffffff;*/
+    background: url("#{resource['images:select-button.png']}") no-repeat right #ffffff;
     width: 150px;
     padding: 10px;
     border:  1px solid #e2e2e2;
@@ -84,7 +84,6 @@ body {
     margin-left:10px;
 
 }
-
 
 .search .ui-button{
     text-shadow: none;

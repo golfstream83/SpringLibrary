@@ -77,6 +77,23 @@
                 </h:form>
 
         </ui:define>
+
+        <ui:define name="books_count">
+
+                <div class="box-sh">
+
+                        <h1><p:outputLabel id="booksCount" value="#{msg.book_count}:  #{libraryFacade.books.size()}" /></h1>
+
+                        <h:form id="add-action">
+                                <p:commandLink >
+                                        <h:outputText value="#{msg.add_book}" title="#{msg.add_book}"/>
+                                </p:commandLink>
+                        </h:form>
+
+                </div>
+
+        </ui:define>
+
 </ui:composition>
 
 </html>

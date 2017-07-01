@@ -16,7 +16,7 @@
                     <ul>
                         <ui:repeat value="${genreDAOImpl.genres}" var="g">
                             <li>
-                                <p:commandLink value="${g.name}"/>
+                                <p:commandLink value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" ajax="false"/>
                             </li>
                         </ui:repeat>
                     </ul>

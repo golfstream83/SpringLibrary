@@ -26,8 +26,4 @@ public class GenreDAOImpl implements GenreDAO{
         return sessionFactory.getCurrentSession().createCriteria(Genre.class).list();
     }
 
-
-
-
-
 }

@@ -3,6 +3,7 @@ package ru.javabegin.training.springlibrary.objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import ru.javabegin.training.springlibrary.enums.SearchType;
 
@@ -11,11 +12,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
+@Scope("singleton")
 public class Utils {
 
     private Map<String, SearchType> searchTypeList = new HashMap<String, SearchType>();
-    private SearchType selectedSearchType = SearchType.TITLE;// значение по-умолчанию
-
+    private String searchString;
 
     @Autowired
     private MessageSource msg;
@@ -29,20 +30,20 @@ public class Utils {
 
     public Map<String, SearchType> getSearchTypeList() {
         searchTypeList.clear();
-        searchTypeList.put(msg.getMessage("author_name",
-                    null, FacesContext.getCurrentInstance().getViewRoot().getLocale()), SearchType.AUTHOR);
-        searchTypeList.put(msg.getMessage("book_name",
-                    null, FacesContext.getCurrentInstance().getViewRoot().getLocale()), SearchType.TITLE);
+        searchTypeList.put(msg.getMessage("author_name", null, FacesContext.getCurrentInstance().getViewRoot().getLocale()), SearchType.AUTHOR);
+        searchTypeList.put(msg.getMessage("book_name", null, FacesContext.getCurrentInstance().getViewRoot().getLocale()), SearchType.TITLE);
         return searchTypeList;
-    }
-
-    public SearchType getSelectedSearchType() {
-        return selectedSearchType;
     }
 
     public void setSearchTypeList(Map<String, SearchType> searchTypeList) {
         this.searchTypeList = searchTypeList;
     }
 
+    public String getSearchString() {
+        return searchString;
+    }
 
+    public void setSearchString(String searchString) {
+        this.searchString = searchString;
+    }
 }

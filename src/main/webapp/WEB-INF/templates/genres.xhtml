@@ -1,28 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
+<h:head>
+    <title>Facelet Title</title>
+</h:head>
 
-    <h:body>
-        <ui:composition>
-            <div class="left-menu">
-                <h:form styleClass="genres" id="genresForm">
-                    <ul>
-                        <ui:repeat value="${genreDAOImpl.genres}" var="g">
-                            <li>
-                                <p:commandLink value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" ajax="false"/>
-                            </li>
-                        </ui:repeat>
-                    </ul>
-                </h:form>
-            </div>
-        </ui:composition>
-    </h:body>
+<h:body>
+    <ui:composition>
+        <div class="left-menu">
+            <h:form styleClass="genres" id="genresForm">
+                <ul>
+                    <ui:repeat value="${genreDAOImpl.genres}" var="g">
+                        <li>
+                            <p:commandButton value="${g.name}" action="searchByGenre" actionListener="#{searchCriteria.setGenre(g)}" styleClass="noborder-button-genre">
+                                <p:ajax execute=":genresForm" render=":booksForm:booksList"/>
+                            </p:commandButton>
+                        </li>
+                    </ui:repeat>
+                </ul>
+            </h:form>
+        </div>
+    </ui:composition>
+</h:body>
 </html>
 

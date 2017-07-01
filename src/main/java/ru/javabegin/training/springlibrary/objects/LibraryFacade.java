@@ -10,7 +10,7 @@ import ru.javabegin.training.springlibrary.entities.Book;
 
 import java.util.List;
 
-@Component
+@Component("libraryFacade")
 @Scope("singleton")
 public class LibraryFacade {
 

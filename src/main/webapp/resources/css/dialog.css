@@ -1,4 +1,5 @@
 /* reset */
+/* reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -32,7 +33,7 @@ body {
 .avatar-box {float: left; width: 155px; text-align: center; padding-top: 27px;}
 .avatar-box img {margin-bottom: 10px;}
 .ava-info {overflow: hidden; border-left: 1px solid #e5e5e5; padding: 25px 0 0 25px;}
-.ava-info .block {overflow: hidden; padding-bottom: 5px;} 
+.ava-info .block {overflow: hidden; padding-bottom: 5px;}
 .ava-info .block p {float: left; width: 135px; font-size: 16px; color: #a3a3a3; margin-top: 17px;}
 .ava-info .block p span {display: block; font-size: 14px; font-style: italic; padding-top: 17px;}
 .ava-form {overflow: hidden; padding: 5px;}
@@ -75,7 +76,7 @@ select,
     height: 6px;
     overflow: hidden;
     cursor: pointer;
-    background: url("#{resource['images:select.png']}")  0 0 no-repeat;
+    /*background: url("#{resource['images:select.png']}")  0 0 no-repeat;*/
 }
 .selectBox-dropdown-menu {
     position: absolute;
@@ -88,17 +89,17 @@ select,
     border: 1px solid #e2e2e2;
 }
 .selectBox-dropdown-menu li {
-    display: block; 
+    display: block;
 }
 .selectBox-dropdown-menu li a {
     display: block;
     padding: 5px 10px;
     color: #000;
     text-decoration: none;
-    cursor: pointer; 
+    cursor: pointer;
 }
 .selectBox-dropdown-menu li a:hover {
-    color: #fff; 
+    color: #fff;
     text-decoration: none;
     background: #333;
 }
@@ -124,7 +125,7 @@ select,
 }
 
 .edit_book_table .ui-panelgrid-footer td button{
-    margin-left:10px;    
+    margin-left:10px;
 }
 
 .edit_book_table tbody{
@@ -162,7 +163,7 @@ select,
     border-bottom: 1px solid #e5e5e5;
 }
 
-#editDialog{    
+#editDialog{
     background: #fff;
     width: 650px !important;;
     border-radius: 5px;
@@ -249,7 +250,7 @@ select,
 
 
 .ui-selectonemenu.ui-state-default{
-    border:1px solid #a8a8a8;   
+    border:1px solid #a8a8a8;
 }
 
 .ui-dialog .ui-dialog-content{
@@ -310,7 +311,7 @@ select,
 #booksForm .ui-dialog-content{
     padding: 10px;
     font-size: 15px;
-    
+
 }
 
 input.mail-subject, textarea.mail-message{

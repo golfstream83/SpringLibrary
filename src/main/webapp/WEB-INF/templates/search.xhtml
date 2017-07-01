@@ -22,8 +22,9 @@
 
                 <h:inputText  id="search_string" styleClass="search-text" value="#{searchCriteria.text}"/>
 
-                <p:commandButton id="btnSearch" value="#{msg.search}" styleClass="button" action="searchByText"/>
-
+                <p:commandButton id="btnSearch" value="#{msg.search}" styleClass="button" action="searchByText">
+                    <p:ajax execute="@form" render=":booksForm:booksList"/>
+                </p:commandButton>
 
                 <div class="dropdown">
                     <h:selectOneMenu id="search_select" styleClass="select_search" value="#{searchCriteria.searchType}">

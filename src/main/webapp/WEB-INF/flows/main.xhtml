@@ -23,8 +23,9 @@
 
                                 <div class="item">
                                         <div class="image-info">
-                                                <h:outputLink styleClass="content_link" target="_blank">
+                                                <h:outputLink styleClass="content_link" value="#{request.contextPath}/PdfContent"  target="_blank">
                                                         <p:graphicImage value="/ShowImage?index=#{rowIndex}" width="110" height="150"/>
+                                                        <f:param name="id" value="#{b.id}"/>
                                                 </h:outputLink>
                                                 <p:panelGrid id="ratingPanel" columns="2">
                                                         <p:rating id="rating" value="#{b.rating}" styleClass="rating" cancel="false" stars="5"/>
@@ -34,9 +35,12 @@
 
                                         <div class="info">
                                                 <div class="book_name">
-                                                        <h:outputLink id="bookName" styleClass="title" target="_blank">
+                                                        <h:outputLink id="bookName" styleClass="title" value="#{request.contextPath}/PdfContent" target="_blank">
                                                                 #{b.name}
+                                                                <f:param name="id" value="#{b.id}"/>
+                                                                <f:param name="save" value="false"/>
                                                         </h:outputLink>
+
                                                 </div>
                                                 <span>#{b.author}</span>
 
@@ -47,12 +51,17 @@
 
                                         </div>
 
-                                        <h:outputLink styleClass="mr" target="_blank">
+                                        <h:outputLink styleClass="mr" value="#{request.contextPath}/PdfContent" target="_blank">
                                                 <p class="read">#{msg.read}</p>
+                                                <f:param name="id" value="#{b.id}"/>
+                                                <f:param name="save" value="false"/>
                                         </h:outputLink>
 
-                                        <h:outputLink styleClass="mr" target="_blank">
+                                        <h:outputLink styleClass="mr" value="#{request.contextPath}/PdfContent" target="_blank">
                                                 <p class="download">#{msg.download}</p>
+                                                <f:param name="id" value="#{b.id}"/>
+                                                <f:param name="filename" value="#{b.name}"/>
+                                                <f:param name="save" value="true"/>
                                         </h:outputLink>
 
                                         <p:commandLink styleClass="mr" title="#{msg.edit_book}">

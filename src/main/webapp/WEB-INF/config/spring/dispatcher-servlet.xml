@@ -9,6 +9,7 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <import resource="webflow.xml"/>
+    <import resource="controllers.xml"/>
 
     <context:component-scan base-package="ru.javabegin.training.springlibrary"/>
 
@@ -45,9 +46,6 @@
         <property name="defaultEncoding" value="UTF-8"/>
     </bean>
 
-    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
-        <property name="defaultLocale" value="ru"/>
-    </bean>
 
     <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
         <property name="jndiName" value="jdbc/Library"/>
@@ -62,6 +60,10 @@
     <bean id="transactionManager"
           class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="ru"/>
     </bean>
 
     <mvc:interceptors>

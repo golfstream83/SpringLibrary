@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+
+        >
+<f:view>
+    <h:head>
+        <title>#{msg.welcome_title}</title>
+    </h:head>
+    <h:body>
+        <f:facet name="last">
+            <h:outputStylesheet library="css" name="authorization.css"/>
+            <h:outputScript library="js" name="library.js" target="head"/>
+        </f:facet>
+        <div class="authorization">
+            <h:panelGroup layout="block" styleClass="lg" id="divLogo">
+                <h:graphicImage library="images" name="ru/logo.png"/>
+            </h:panelGroup>
+
+            <ui:include src="/WEB-INF/templates/locales.xhtml"/>
+
+            <div class="clear"/>
+
+            <form class="login_form" id="formLogin" action="#{request.contextPath}/app/checkuser" method='POST'>
+
+                <p:inputText id="username" value="#{user.username}" required="true" styleClass="aut-text"/>
+
+                <p:password id="password" value="#{user.password}" redisplay="true" required="true"
+                            styleClass="aut-text"/>
+
+                <c:if test="${not empty param.login_failed}">
+                    <div class="error">
+                        Login failed
+                    </div>
+                </c:if>
+
+                <div class="div-login-button">
+                    <p:panelGrid columns="3" columnClasses="col, col, col" styleClass="panel-login">
+                        <p:commandButton id="btnLogin" value="Login" type="submit" styleClass="login_button"/>
+                    </p:panelGrid>
+                </div>
+
+            </form>
+        </div>
+    </h:body>
+</f:view>
+</html>
+

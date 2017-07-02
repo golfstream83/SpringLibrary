@@ -35,9 +35,6 @@ public class PdfContent extends HttpServlet {
         response.setContentType("application/pdf; charset=UTF-8");
         OutputStream out = response.getOutputStream();
         try {
-
-
-
             long id = Long.valueOf(request.getParameter("id"));
             Boolean save = Boolean.valueOf(request.getParameter("save"));
 

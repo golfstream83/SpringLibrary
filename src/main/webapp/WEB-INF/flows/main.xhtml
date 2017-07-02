@@ -6,6 +6,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/tags"
 >
 
 <ui:composition template="/WEB-INF/templates/library.xhtml">
@@ -64,11 +65,12 @@
                                                 <f:param name="save" value="true"/>
                                         </h:outputLink>
 
-                                        <p:commandLink styleClass="mr" title="#{msg.edit_book}">
+                                        <p:commandLink styleClass="mr" title="#{msg.edit_book}" rendered="#{sec:areAllGranted('ROLE_ADMIN')}">
                                                 <p class="edit">#{msg.edit}</p>
                                         </p:commandLink>
 
-                                        <p:commandLink styleClass="delete-button" title="#{msg.delete_book}" type="button">
+                                        <p:commandLink styleClass="delete-button" title="#{msg.delete_book}" type="button"
+                                                       rendered="#{sec:areAllGranted('ROLE_ADMIN')}">
                                                 <p class="delete">#{msg.delete}</p>
                                         </p:commandLink>
 
@@ -81,7 +83,7 @@
         <ui:define name="books_count">
                 <div class="box-sh">
                         <h1><p:outputLabel id="booksCount" value="#{msg.book_count}:  #{libraryFacade.books.size()}" /></h1>
-                        <h:form id="add-action">
+                        <h:form id="add-action" rendered="#{sec:areAllGranted('ROLE_ADMIN')}">
                                 <p:commandLink >
                                         <h:outputText value="#{msg.add_book}" title="#{msg.add_book}"/>
                                 </p:commandLink>
